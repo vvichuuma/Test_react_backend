@@ -10,6 +10,10 @@ Rails.application.routes.draw do
 
     get "/current" => 'users#user_logged'
 
+    get '/tasks' => 'tasks#index'
+
+    post'/tasks' => 'tasks#create'
+
 
   end 
   
