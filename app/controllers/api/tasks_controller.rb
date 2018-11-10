@@ -7,14 +7,12 @@ class Api::TasksController < ApplicationController
 
  def create 
 
-
-
    @task = Task.new(
        name: params['name']
     )
 
    if @task.save
-     render 'show.json.jbuilder'
+     render json:{message:'task has been added'}
    end
 
 
