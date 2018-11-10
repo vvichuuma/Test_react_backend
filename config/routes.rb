@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 
     post'/tasks' => 'tasks#create'
 
+    post '/photos' => 'photos#create'
+
 
   end 
   
