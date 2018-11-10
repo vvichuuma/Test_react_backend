@@ -10,8 +10,7 @@ class Api::TasksController < ApplicationController
 
 
    @task = Task.new(
-       name: params['name'],
-       user_id: params['userid']
+       name: params['name']
     )
 
    if @task.save
