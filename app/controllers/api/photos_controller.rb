@@ -1,13 +1,13 @@
 class Api::PhotosController < ApplicationController
  
   def create
-    @photo = Photo.new(
+    photo = Photo.new(
         
         name: params[:name]
 
       )
 
-    if @photo.save
+    if photo.save
       
       render json:{message:'Vish is a Computer Programmer'}
     end 

@@ -1,17 +1,17 @@
 class Api::TasksController < ApplicationController
 
  def index 
-   @tasks = Task.all
+   tasks = Task.all
     render 'index.json.jbuilder'
  end 
 
  def create 
 
-   @task = Task.new(
+   task = Task.new(
        name: params['name']
     )
 
-   if @task.save
+   if task.save
      render json:{message:'task has been added'}
    end
 
